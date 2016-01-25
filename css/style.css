@@ -1,0 +1,64 @@
+html, body { 
+	color: #d9d9d9;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(#000115, #003848);
+}
+
+.navbar{
+	background: rgba(255, 255, 255, 0.1);
+	border: none;
+	border-radius: 0;
+	height: 100px;
+}
+
+.navbar-collapse{
+	border: none;
+}
+
+.navbar-brand,
+.navbar-nav li a {
+    line-height: 100px;
+    height: 100px;
+    padding-top: 0px;
+    width: 130px;
+    text-align: center;
+}
+
+#navcoll > ul > li > a{ 
+    color: #ffffff;
+}
+
+#navcoll > ul > li > a:hover{ 
+    color: #b3eaff;
+}
+
+#navcoll > ul > li.active > a{ 
+    background: rgba(255, 255, 255, 0.05);
+}
+
+
+
+@media (max-width: 767px) {
+.navbar-brand,
+.navbar-nav li a {
+    line-height: 50px;
+    height: 50px;
+    padding-top: 0px;
+    width: 100%;
+    text-align: center;
+}
+.navbar-collapse{
+	border: none;
+	margin-top: 50px;
+}
+}
+
+.fill { 
+    min-height: 100%;
+    height: 100%;
+    min-width: 100%;
+    width: 100%;
+}
