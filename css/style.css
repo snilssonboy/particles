@@ -97,6 +97,8 @@ html, body {
     border-left: 75px solid #00011a;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    display: flex; 
+    align-items: center;
 }
 
 .arrow-left {
@@ -107,8 +109,19 @@ html, body {
     border-right: 75px solid #00011a;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    display: flex; 
+    align-items: center;
 }
 
+.faicon-left{
+    margin-left: -65px;
+    color: blue;
+}
+
+.faicon-right{
+    margin-left: 35px;
+    color: red;
+}
 
 .fill { 
     min-height: 100%;
