@@ -1,10 +1,13 @@
+@import url(https://fonts.googleapis.com/css?family=Gruppo);
+
 html, body { 
-	color: #d9d9d9;
+    color: #d9d9d9;
     height: 100%;
     width: 100%;
-    padding: 0;
-    margin: 0;
-    background-image: linear-gradient(#000115, #003848);
+
+    background: linear-gradient(to bottom, #000115, #003848);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .navbar{
@@ -12,6 +15,8 @@ html, body {
 	border: none;
 	border-radius: 0;
 	height: 100px;
+            margin-bottom: 50px;
+            font-family: 'Gruppo', cursive;
 }
 
 .navbar-collapse{
@@ -27,8 +32,19 @@ html, body {
     text-align: center;
 }
 
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #b3eaff;
+}
+
+.navbar-default .navbar-brand {
+    font-size: 38px;
+    color: white;
+    margin-right: 50px;
+}
+
 #navcoll > ul > li > a{ 
     color: #ffffff;
+    font-size: 17px;
 }
 
 #navcoll > ul > li > a:hover{ 
@@ -39,6 +55,66 @@ html, body {
     background: rgba(255, 255, 255, 0.05);
 }
 
+#navcoll > ul > li:first-child{
+    margin-left: 30px;
+}
+
+/*
+@media (min-width: 992px) {
+    .row > .col-md-4:first-child{
+        width: 38%
+    }
+
+    .row > .col-md-4:nth-child(2){
+        width: 24%
+    }
+
+    .row > .col-md-4:last-child{
+        width: 38%
+    }
+}*/
+
+.card{
+    background: linear-gradient(to top, #000115, #003848);
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.card-inner{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.arrow-right {
+    width: 0px;
+    height: 100%;
+    border-top: 75px solid transparent;
+    border-bottom: 75px solid transparent;
+    border-left: 75px solid #00011a;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.arrow-left {
+    width: 0px;
+    height: 100%;
+    border-top: 75px solid transparent;
+    border-bottom: 75px solid transparent;
+    border-right: 75px solid #00011a;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+.fill { 
+    min-height: 100%;
+    height: 100%;
+    min-width: 100%;
+    width: 100%;
+}
 
 
 @media (max-width: 767px) {
@@ -52,13 +128,27 @@ html, body {
 }
 .navbar-collapse{
 	border: none;
-	margin-top: 50px;
-}
+	margin-top: 50px;  
+    }
 }
 
-.fill { 
-    min-height: 100%;
-    height: 100%;
-    min-width: 100%;
-    width: 100%;
+@media (min-width: 768px){
+    .container {
+        width: 100%;
+    }
 }
+
+@media (min-width: 1300px){
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1600px){
+    .container {
+    width: 95%;
+    }    
+}
+
+
+
