@@ -1,9 +1,5 @@
 var time = 0;
 
-function stepup(){
-	
-}
-
 $(function() {
         $(".dial").knob();
 });
@@ -17,6 +13,6 @@ setInterval(function(){
 
  	$(".dial")
  		.val(time)
-        .trigger('change');
+        		.trigger('change');
 
  }, 10);
