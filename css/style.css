@@ -76,16 +76,12 @@ html, body {
     border: 1px solid #002032;
     padding: 4px;
     z-index: 2;
+    display: flex;
 }
 
 .btn-content{
-    position: relative;
-    height: 140px;
-    width: auto;
-    top: -142px;
-    left: 154px;
-    padding-right: 154px;
-    margin-top: 2px;
+    width: 100%;
+    padding-left: 4px;
     z-index: 5;
 }
 
@@ -139,12 +135,12 @@ body > div > div > div > div > div:nth-child(3){
 }
 
 body > div > div > div> div > div.btn-content > div:nth-child(7){
-
+    margin-left: 0px;
 }
 
 .btn-buy{
     height: 25px;
-    width: 32.6%;
+    width: 32.65%;
     padding: 0px;
     background-color: #08213E;
 
