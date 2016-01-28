@@ -1,0 +1,20 @@
+Buildings --
+10-16 Buildings
+
+Upgrades --
+JQuery Knob, 0-100 Value, 1 Value per sec + 1 Value per manual click, when it reaches 100 you get gems, 90% of lowest
+value gem, 70% second lowest value, 50%, 30%, 20%, 10%, 5%, 1%, 0.1%. Equal amounts of gems as there are buildings.
+The gems can be sacrificed to increase the chance of getting more of that gem. At first you only get 1 gem at a time, then
+by sacrificing for example 10 of that gem, the next time you will recieve 2 gems, then it might cost 50 gems for the next upgrade and you'll get 4 
+gems at a time.
+
+Idea: Each gem also has a set value, which can be sold for a third currency, that you can sacrifice to speed up the rate at which the knob fills up.
+
+Upgrades are when you sacrifice gems corresponding with that building to boost it's effectiveness, which gradually becomes more expensive.
+
+
+
+Managers --
+Managers are bought to keep the buildings running manually.
+
+About --
