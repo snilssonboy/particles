@@ -3,22 +3,32 @@ var routerApp = angular.module('routerApp', ['ui.router']);
 
 routerApp.config(function($stateProvider, $urlRouterProvider) {
     
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/buildings');
     
     $stateProvider
         
-        // HOME STATES AND NESTED VIEWS ========================================
-        .state('home', {
-            url: '/home',
-            templateUrl: 'partial-home.html'
+        // HOME STATE AND NESTED VIEWS ========================================
+        .state('buildings', {
+            url: '/buildings',
+            templateUrl: 'partial-buildings.html'
         })
         
-         // UPGRADE PAGE =================================
+        // UPGRADES PAGE =================================
         .state('upgrades', {
             url: '/upgrades',
             templateUrl: 'partial-upgrades.html'    
         });
 
-    
+        // MANAGERS PAGE =================================
+        .state('managers', {
+            url: '/managers',
+            templateUrl: 'partial-managers.html'    
+        });
+
+        // ABOUT PAGE =================================
+        .state('about', {
+            url: '/about',
+            templateUrl: 'partial-about.html'    
+        });
         
 });
