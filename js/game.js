@@ -11,4 +11,4 @@ setInterval(function(){
  		.val(time)
         		.trigger('change');
 
- }, 10);
+ }, 100);
