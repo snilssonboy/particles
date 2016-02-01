@@ -17,13 +17,13 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         .state('upgrades', {
             url: '/upgrades',
             templateUrl: 'partial-upgrades.html'    
-        });
+        })
 
         // MANAGERS PAGE =================================
         .state('managers', {
             url: '/managers',
             templateUrl: 'partial-managers.html'    
-        });
+        })
 
         // ABOUT PAGE =================================
         .state('about', {
