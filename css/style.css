@@ -202,3 +202,22 @@ html, body {
     background-color: #001A2C;
     color: #b3eaff;
 }
+
+@media (min-width: 768px){
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px){
+    .container {
+        width: 95%;
+    }
+}
+
+@media (min-width: 1500px){
+    .container {
+        width: 80%;
+    }
+}
+
