@@ -19,9 +19,6 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'partial-upgrades.html'    
         });
 
-        // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
-        .state('about', {
-            // we'll get to this in a bit       
-        });
+    
         
 });
