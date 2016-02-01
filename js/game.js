@@ -1,10 +1,5 @@
 var time = 0;
 
-$(function() {
-        $(".dial").knob();
-        console.log("test");
-});
-
 setInterval(function(){ 
 	if(time < 100){
 		time += 0.1;
