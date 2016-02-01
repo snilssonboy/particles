@@ -1,18 +1,21 @@
-var time = 0;
+// app.js
+var routerApp = angular.module('routerApp', ['ui.router']);
 
-$(function() {
-        $(".dial").knob();
+routerApp.config(function($stateProvider, $urlRouterProvider) {
+    
+    $urlRouterProvider.otherwise('/home');
+    
+    $stateProvider
+        
+        // HOME STATES AND NESTED VIEWS ========================================
+        .state('home', {
+            url: '/home',
+            templateUrl: 'partial-home.html'
+        })
+        
+        // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
+        .state('about', {
+            // we'll get to this in a bit       
+        });
+        
 });
-
-setInterval(function(){ 
-	if(time < 100){
-		time += 0.1;
-	}else{
-		time = 0;
-	}
-
- 	$(".dial")
- 		.val(time)
-        		.trigger('change');
-
- }, 10);
