@@ -226,15 +226,19 @@ h4, h1, p, a {
   margin-top: 30px; }
 
 .list-group-item {
-  background-color: #08213E;
-  border: 1px solid rgba(36, 176, 230, 0.11);
+  background-color: #D1DDDE;
+  border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 4px;
   margin-bottom: 5px;
-  height: 35px; }
+  height: 35px;
+  color: #666666;
+  font-size: 16px;
+  line-height: 15px; }
 
 .badge {
-  background-color: #001A2C;
-  color: #b3eaff; }
+  background: #666666;
+  color: #D1DDDE;
+  font-weight: normal; }
 
 @media (min-width: 768px) {
   .container {

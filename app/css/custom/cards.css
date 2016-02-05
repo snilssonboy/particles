@@ -87,6 +87,7 @@
   display: inline-table; }
 
 .btn-mine {
-  background-color: #08213E;
+  background-color: #D1DDDE;
   font-size: 18px;
-  border: 1px solid rgba(36, 176, 230, 0.5); }
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: #666666; }
