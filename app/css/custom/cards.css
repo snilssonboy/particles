@@ -95,4 +95,9 @@
   width: 50%;
   height: 40px;
   left: 25%;
-  bottom: 20px; }
+  bottom: 20px;
+  border-radius: 4px;
+  outline: none; }
+
+.btn-mine:active {
+  background-color: #B9C1C1; }
