@@ -15,7 +15,7 @@
     position: relative;
     width: 100px;
     height: 140px;
-    background: linear-gradient(to bottom, rgba(185, 185, 185, 0.9), rgba(115, 139, 146, 0.8));
+    background: linear-gradient(to bottom, #F4FDFF, rgba(0, 0, 0, 0.21));
     color: #565656;
     border: 1px solid #9A9A9A;
     border-radius: 4px;
@@ -34,7 +34,20 @@
 }
 
 .card-icon:hover{
-    background-color: gray;
+    background-color: #00C2FF;
+}
+
+.progress{
+    margin-bottom: 10px;
+    background-color: #D3D6D8;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.progress-bar-custom{
+    background: #A0E8FF;
+    color: #6F6F6F;
+    font-size: 15px;
+    line-height: 18px;
 }
 
 .card-content {
@@ -89,8 +102,7 @@
 }
 
 .card-buy:hover{
-    color: #C7FCFF;
-     text-shadow: 1px 1px black;
+    background-color: #A0E8FF;
  }
 
 .button-row {

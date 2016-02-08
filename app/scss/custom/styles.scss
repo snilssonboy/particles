@@ -5,7 +5,7 @@ html, body {
     height: 100%;
     width: 100%;
 
-    background: linear-gradient(to bottom, #54B5CE, #D1DBDE);
+    background: linear-gradient(to bottom, #0E0E0E, #717171);
     background-repeat: no-repeat;
     background-attachment: fixed;
 
@@ -24,6 +24,10 @@ body {
 
 h4, h1, p, a{
     color: #666666;
+}
+
+.text-light{
+    color: #F5FCFF;
 }
 
 .uninteractive{
@@ -143,20 +147,6 @@ h4, h1, p, a{
     min-width: 100%;
     width: 100%;
 }
-
-.progress{
-    margin-bottom: 10px;
-    background-color: #D3D6D8;
-    border: 1px solid rgba(0,0,0,0.2);
-}
-
-.progress-bar-custom{
-    background: #C7FCFF;
-    color: #7D7D7D;
-}
-
-
-
 
 .list-group{
     margin-top: 30px;
