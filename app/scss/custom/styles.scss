@@ -26,6 +26,49 @@ h4, h1, p, a{
     color: #666666;
 }
 
+#logo{
+    height: 100%; 
+    width: 400px;
+    padding-top: 7px;
+    margin-bottom: -6px;
+}
+
+@media(max-width: 991px){
+    #logo{
+        height: 100%; 
+        width: 220px;
+        padding-top: 28px;
+    }
+}
+
+@media(max-width: 767px){
+    #logo{
+        height: 100%; 
+        width: 360px;
+        padding-top: 13px;
+        border: 0px;
+        box-shadow: none;
+        background: none;
+    }
+}
+
+@media(max-width: 440px){
+    #logo{
+        height: 100%; 
+        width: 250px;
+        padding-top: 26px;
+        border: 0px;
+        box-shadow: none;
+        background: none;
+        margin-bottom: 6px;
+    }
+    .navbar-collapse{
+    border: none;
+    margin-top: 0px;  
+    }
+}
+
+
 .text-light{
     color: #F5FCFF;
 }
@@ -137,7 +180,7 @@ h4, h1, p, a{
 
 .navbar-collapse{
     border: none;
-    margin-top: 50px;  
+    margin-top: 1px;  
     }
     #navcoll > ul > li:first-child{
     margin-left: 0px;
