@@ -12,3 +12,10 @@ setInterval(function(){
         		.trigger('change');
 
  }, 100);
+
+$(function(){ 
+     var navMain = $("#navcoll");
+     navMain.on("click", "a", null, function () {
+         navMain.collapse('hide');
+     });
+ });
