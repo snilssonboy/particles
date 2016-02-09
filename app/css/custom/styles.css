@@ -20,7 +20,7 @@ body {
   padding-top: 140px; }
 
 h4, h1, p, a {
-  color: #666666; }
+  color: #adadad; }
 
 #logo {
   height: 100%;
@@ -57,7 +57,7 @@ h4, h1, p, a {
     margin-top: 0px; } }
 
 .text-light {
-  color: #F5FCFF; }
+  color: #adadad; }
 
 .uninteractive {
   user-select: none;
@@ -75,9 +75,9 @@ h4, h1, p, a {
   height: 100px;
   margin-bottom: 50px;
   font-family: 'Gruppo', cursive;
-  -webkit-box-shadow: 0 4px 4px -2px #000000;
-  -moz-box-shadow: 0 4px 4px -2px #000000;
-  box-shadow: 0 4px 10px 0px #000000; }
+  -webkit-box-shadow: 0 4px 4px -2px #FFB820;
+  -moz-box-shadow: 0 4px 4px -2px #FFB820;
+  box-shadow: 0 4px 10px 0px #FFB820; }
 
 .navbar-collapse {
   border: none;
@@ -94,6 +94,9 @@ h4, h1, p, a {
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
   color: #D1F1D5; }
 
+.navbar-default .navbar-toggle {
+  border-color: #FFB820; }
+
 .navbar-default .navbar-brand {
   font-size: 38px;
   color: white;
@@ -104,15 +107,15 @@ h4, h1, p, a {
   font-size: 17px; }
 
 #navcoll > ul > li > a:hover {
-  color: #ACD0FF;
-  box-shadow: 0px -5px 0px 0px #ACD0FF inset;
+  color: #FFB820;
+  box-shadow: 0px -5px 0px 0px #FFB820 inset;
   background-color: #404040; }
 
 #navcoll > ul > li:first-child {
   margin-left: 110px; }
 
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #ACD0FF;
+  background-color: #FFB820;
   margin-left: 3px; }
 
 @media (max-width: 767px) {
@@ -125,7 +128,7 @@ h4, h1, p, a {
     width: 100%;
     text-align: center;
     color: #D1F1D5;
-    box-shadow: 0px -1px 1px 0px #ACD0FF inset;
+    box-shadow: 0px -1px 1px 0px #FFB820 inset;
     background-color: #3D3D3D; }
   #navcoll > ul > li > a:hover {
     background-color: #616161; }
@@ -163,18 +166,18 @@ h4, h1, p, a {
   margin-top: 30px; }
 
 .list-group-item {
-  background-color: #F5FCFF;
+  background-color: #313131;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 4px;
   margin-bottom: 5px;
   height: 35px;
-  color: #666666;
+  color: #adadad;
   font-size: 16px;
   line-height: 15px; }
 
 .badge {
   background: #666666;
-  color: #D1DDDE;
+  color: #adadad;
   font-weight: normal; }
 
 @media (min-width: 768px) {

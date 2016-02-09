@@ -1,5 +1,5 @@
 .card {
-    background: #F5FCFF;
+    background: #313131;
     height: 150px;
     margin-bottom: 20px;
     border-radius: 6px;
@@ -15,9 +15,9 @@
     position: relative;
     width: 100px;
     height: 140px;
-    background: linear-gradient(to bottom, #F4FDFF, rgba(0, 0, 0, 0.21));
-    color: #565656;
-    border: 1px solid #9A9A9A;
+    background: linear-gradient(to bottom, #313131, rgb(35, 35, 35));
+    color: #adadad;
+    border: 1px solid #585858;
     border-radius: 4px;
     display: -webkit-box;
     display: -webkit-flex;
@@ -34,20 +34,27 @@
 }
 
 .card-icon:hover{
-    background-color: #ACD0FF;
+    background: linear-gradient(to bottom, #4E4E4E, #232323);
+    color: #FFC043;
 }
 
 .progress{
     margin-bottom: 10px;
-    background-color: #D3D6D8;
+    background-color: #313131;
     border: 1px solid rgba(0,0,0,0.2);
 }
 
 .progress-bar-custom{
-    background: #B1B1B1;
-    color: #6F6F6F;
+    background: #FFB820;
+    color: #5d5d5d;
     font-size: 15px;
     line-height: 18px;
+
+    background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
+    -webkit-background-size: 40px 40px;
+    background-size: 40px 40px;
 }
 
 .card-content {
@@ -87,7 +94,7 @@
     position: relative;
     height: 20px;
     width: calc(33.33% - 2px);
-    background-color: #FAFAFF;
+    background-color: #313131;
     text-align: center;
     display: inline-block;
     cursor: pointer;
@@ -102,7 +109,8 @@
 }
 
 .card-buy:hover{
-    background-color: #ACD0FF;
+    color: #FFB820;
+    background-color: #545454;
  }
 
 .button-row {
@@ -117,10 +125,10 @@
 }
 
 .btn-mine {
-    background-color: #F5FCFF;
+    background-color: #313131;
     font-size: 18px;
     border: 1px solid rgba(0, 0, 0, 0.3);
-    color: #666666;
+    color: #adadad;
     position: absolute;
     width: 50%;
     height: 40px;
