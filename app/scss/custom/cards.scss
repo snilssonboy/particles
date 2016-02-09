@@ -22,6 +22,7 @@
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
+    cursor: pointer;
     display: flex;
         -webkit-box-pack: center;
         -webkit-justify-content: center;
@@ -38,6 +39,10 @@
     color: #FFC043;
 }
 
+.card-icon:active{
+    background: linear-gradient(to bottom, #313131, rgb(35, 35, 35));
+}
+
 .progress{
     margin-bottom: 10px;
     background-color: #313131;
@@ -49,7 +54,7 @@
     color: #5d5d5d;
     font-size: 15px;
     line-height: 18px;
-
+    transition: none;
     background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
     background-image: -o-linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
     background-image: linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
@@ -113,6 +118,10 @@
     background-color: #545454;
  }
 
+ .card-buy:active{
+    background-color: #313131;
+ }
+
 .button-row {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -138,7 +147,12 @@
     outline: none;
 }
 
+.btn-mine:hover{
+    color: #FFB820;
+    background-color: #545454;
+}
+
 .btn-mine:active{
-    background-color: #B9C1C1;
+    background-color: #313131;
 }
 
