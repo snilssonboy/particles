@@ -5,8 +5,9 @@ var d = new Date();
 var t = d.getTime();
 
 
-var Building = function(BASECOST, COST, INCOME, COUNT, TICKTIME, TICKLENGTH, ACTIVE, TIMELEFT){
+var Building = function(NAME, BASECOST, COST, INCOME, COUNT, TICKTIME, TICKLENGTH, ACTIVE, TIMELEFT){
 
+	this.itemname = NAME;
 	this.baseCost = BASECOST;
 	this.cost = COST;
 	this.income = INCOME;
@@ -18,16 +19,16 @@ var Building = function(BASECOST, COST, INCOME, COUNT, TICKTIME, TICKLENGTH, ACT
 }
 
 var buildings = [
-	new Building(10.00,10.00,1.00,0,0,1000,false, 0),
-	new Building(20.00,20.00,2.00,0,0,2000,false, 0),
-	new Building(30.00,30.00,3.00,0,0,3000,false, 0),
-	new Building(40.00,40.00,4.00,0,0,4000,false, 0),
-	new Building(50.00,50.00,5.00,0,0,5000,false, 0),
-	new Building(60.00,60.00,6.00,0,0,6000,false, 0),
-	new Building(70.00,70.00,7.00,0,0,7000,false, 0),
-	new Building(80.00,80.00,8.00,0,0,8000,false, 0),
-	new Building(90.00,90.00,9.00,0,0,9000,false, 0),
-	new Building(100.00,100.00,10.00,0,0,10000,false, 0)
+	new Building("Planck Measure",10.00,10.00,1.00,0,0,1000,false,0),
+	new Building("Neutrino Boiler",20.00,20.00,2.00,0,0,2000,false,0),
+	new Building("Top Quark Identifier",30.00,30.00,3.00,0,0,3000,false,0),
+	new Building("Strange Quark Mixer",40.00,40.00,4.00,0,0,4000,false,0),
+	new Building("Proton Neutralizer",50.00,50.00,5.00,0,0,5000,false,0),
+	new Building("Electron Synthesizer",60.00,60.00,6.00,0,0,6000,false,0),
+	new Building("Gamma Generator",70.00,70.00,7.00,0,0,7000,false,0),
+	new Building("Hydrogen Smasher",80.00,80.00,8.00,0,0,8000,false,0),
+	new Building("Carbon Collector",90.00,90.00,9.00,0,0,9000,false,0),
+	new Building("Particle Accelerator",100.00,100.00,10.00,0,0,10000,false,0)
 ];
 
 setInterval(function(){ 
@@ -55,9 +56,11 @@ var UpdateEverything = function(){
 		if(buildings[i].active){
 			$('#building' + (i+1)+ ' > .card-content > .progress > .progress-bar-custom').width((buildings[i].timeLeft / buildings[i].tickLength) * 100 + '%');
 			$('#building' + (i+1) + ' > .card-content > .progress > .progress-bar-custom').html((buildings[i].timeLeft / 1000).toFixed(1) + ' sec');
+			$('#building' + (i+1) + ' > .card-content > .card-title').html(buildings[i].itemname + " - " + buildings[i].count);
 		}else{
 			$('#building' + (i+1)+ ' > .card-content > .progress > .progress-bar-custom').width((buildings[i].timeLeft / buildings[i].tickLength) * 100 + '%');
 			$('#building' + (i+1) + ' > .card-content > .progress > .progress-bar-custom').html((buildings[i].tickLength / 1000).toFixed(1) + ' sec');
+			$('#building' + (i+1) + ' > .card-content > .card-title').html(buildings[i].itemname + " - " + buildings[i].count);
 		}
 	}
 }
