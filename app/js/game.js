@@ -2,7 +2,7 @@ var dialTime = 0;
 var money = 10;
 
 
-var Building = function(NAME, BASECOST, COST, INCOME, COUNT, TICKTIME, TICKLENGTH, ACTIVE, TIMELEFT, ITEMDESCRIPTION){
+var Building = function(NAME, BASECOST, COST, INCOME, COUNT, TICKTIME, TICKLENGTH, ACTIVE, TIMELEFT, ITEMDESCRIPTION, MANAGER, MANAGERCOST){
 
 	this.itemname = NAME;
 	this.baseCost = BASECOST;
@@ -14,19 +14,21 @@ var Building = function(NAME, BASECOST, COST, INCOME, COUNT, TICKTIME, TICKLENGT
 	this.active = ACTIVE;
 	this.timeLeft = TIMELEFT;
 	this.itemDesc = ITEMDESCRIPTION;
+	this.manager = MANAGER;
+	this.managerCost = MANAGERCOST;
 }
 
-var buildings = [	//NAME 			//BS 		//C 		//INC 		//Count
-	new Building("Planck Measure",		10.00,		10.00,		1.00,		0,	0,1000,false,0, "One"),
-	new Building("Neutrino Boiler",		20.00,		20.00,		2.00,		0,	0,2000,false,0, "Two"),
-	new Building("Top Quark Identifier",		30.00,		30.00,		3.00,		0,	0,3000,false,0, "Three"),
-	new Building("Strange Quark Mixer",		40.00,		40.00,		4.00,		0,	0,4000,false,0, "Four"),
-	new Building("Proton Neutralizer",		50.00,		50.00,		5.00,		0,	0,5000,false,0, "Five"),
-	new Building("Electron Synthesizer",		60.00,		60.00,		6.00,		0,	0,6000,false,0, "Six"),
-	new Building("Gamma Generator",		70.00,		70.00,		7.00,		0,	0,7000,false,0, "Seven"),
-	new Building("Hydrogen Smasher",		80.00,		80.00,		8.00,		0,	0,8000,false,0, "Eight"),
-	new Building("Carbon Collector",		90.00,		90.00,		9.00,		0,	0,9000,false,0, "Nine"),
-	new Building("Particle Accelerator",		100.00,	100.00,	10.00,		0,	0,10000,false,0, "Ten")
+var buildings = [//NAME 		//BS 		//C 		//INC 		//Count
+	new Building("Planck Measure",	10.00,		10.00,		1.00,		0,	0,1000,false,0, "One", false, 1000),
+	new Building("Neutrino Boiler",	20.00,		20.00,		2.00,		0,	0,2000,false,0, "Two", false, 2000),
+	new Building("Top Quark Identifier",	30.00,		30.00,		3.00,		0,	0,3000,false,0, "Three", false, 3000),
+	new Building("Strange Quark Mixer",	40.00,		40.00,		4.00,		0,	0,4000,false,0, "Four", false, 4000),
+	new Building("Proton Neutralizer",	50.00,		50.00,		5.00,		0,	0,5000,false,0, "Five", false, 5000),
+	new Building("Electron Synthesizer",	60.00,		60.00,		6.00,		0,	0,6000,false,0, "Six", false, 6000),
+	new Building("Gamma Generator",	70.00,		70.00,		7.00,		0,	0,7000,false,0, "Seven", false, 7000),
+	new Building("Hydrogen Smasher",	80.00,		80.00,		8.00,		0,	0,8000,false,0, "Eight", false, 8000),
+	new Building("Carbon Collector",	90.00,		90.00,		9.00,		0,	0,9000,false,0, "Nine", false, 9000),
+	new Building("Particle Accelerator",	100.00,	100.00,	10.00,		0,	0,10000,false,0, "Ten", false, 10000)
 ];
 
 setInterval(function(){ 
@@ -90,6 +92,14 @@ var UpdateEverything = function(){
 			$('#building' + (i+1) + ' div.button-row > div:nth-child(3)').removeClass("affordable");
 		}
 
+		if(money >= buildings[i].managerCost && !buildings[i].manager){
+			$('#manager' + (i+1) + ' > div.card-content > div').addClass("hire-affordable");
+		}else if(buildings[i].manager){
+			$('#manager' + (i+1) + ' > div.card-content > div').remove();
+		}else{
+			$('#manager' + (i+1) + ' > div.card-content > div').removeClass("hire-affordable");
+		}
+
 	}
 }
 
@@ -101,7 +111,7 @@ function StartBuilding(x){
 		buildings[x - 1].tickTime = new Date().getTime();
 		console.log("Started building " + (buildings[x-1].itemname) + " on tick " + buildings[x - 1].tickTime);
 	}
-	event.stopPropagation? event.stopPropagation() : event.cancelBubble = true;
+	
 }
 
 function cycleTimer(){
@@ -118,6 +128,10 @@ function cycleTimer(){
 				console.log(value.itemname + ' finished');
 				money += (value.income * value.count);
 				UpdateEverything();
+
+				if(value.manager){
+					StartBuilding(key + 1);
+				}
 			}
 		}
 	});
@@ -136,6 +150,15 @@ function CalculateCost(id, amount){
 	}
 
 	return totalCost;
+}
+
+function HireManager(id){
+	if(money >= buildings[id - 1].managerCost){
+		buildings[id - 1].manager = true;
+		money -= buildings[id - 1].managerCost;
+		StartBuilding(id);
+		UpdateEverything();
+	}
 }
 
 function BuyItem(id, amount){

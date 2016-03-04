@@ -160,3 +160,40 @@
     background-color: #313131;
 }
 
+.manager-title{
+    font-size: 20px;
+    margin-top: 0px;
+    margin-left: 5px;
+}
+
+.manager-text{
+    font-size: 16px;
+    margin-top: -10px;
+    margin-left: 5px;
+    white-space: normal;
+}
+
+.hire{
+    position: relative;
+    top: 2px;
+    left: -100px;
+    width: 90px;
+    height: 30px;
+    background-color: #313131;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 4px;
+    color: #737373;
+    text-align: center;
+    line-height: 28px;
+    font-size: 16px;
+}
+
+.hire-affordable{
+    background-color: #545454;
+    color: #FFB820;
+}
+
+.hire:active{
+    background-color: #272727;
+}
