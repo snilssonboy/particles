@@ -97,11 +97,14 @@
   margin-right: 0px; }
 
 .card-buy:hover {
-  color: #FFB820;
-  background-color: #545454; }
+  color: #FFB820; }
 
 .card-buy:active {
   background-color: #313131; }
+
+.affordable {
+  background-color: #545454;
+  color: #FFB820; }
 
 .button-row {
   padding-top: 5px;

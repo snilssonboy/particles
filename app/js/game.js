@@ -72,9 +72,24 @@ var UpdateEverything = function(){
 			$('#building' + (i+1) + ' .card-content > #itemaward').html('Generate: ' + buildings[i].income + '$');
 		}
 
-		if(money >= buildings[i].cost){
-
+		if(money >= CalculateCost(i + 1, 1)){
+			$('#building' + (i+1) + ' div.button-row > div:nth-child(1)').addClass("affordable");
+		}else{
+			$('#building' + (i+1) + ' div.button-row > div:nth-child(1)').removeClass("affordable");
 		}
+
+		if(money >= CalculateCost(i + 1, 10)){
+			$('#building' + (i+1) + ' div.button-row > div:nth-child(2)').addClass("affordable");
+		}else{
+			$('#building' + (i+1) + ' div.button-row > div:nth-child(2)').removeClass("affordable");
+		}
+
+		if(money >= CalculateCost(i + 1, 100)){
+			$('#building' + (i+1) + ' div.button-row > div:nth-child(3)').addClass("affordable");
+		}else{
+			$('#building' + (i+1) + ' div.button-row > div:nth-child(3)').removeClass("affordable");
+		}
+
 	}
 }
 
@@ -110,32 +125,28 @@ function cycleTimer(){
 	UpdateEverything();
 }
 
+function CalculateCost(id, amount){
+	var totalCost = 0;
+
+	var thisItemBaseCost = buildings[id - 1].baseCost;
+	var thisItemCount = buildings[id - 1].count;
+
+	for(var i = 0; i < amount; i++){
+		totalCost = totalCost + (thisItemBaseCost * Math.pow(1.15, thisItemCount + i));
+	}
+
+	return totalCost;
+}
 
 function BuyItem(id, amount){
-	console.log("Trying to buy " + amount + "x of " + buildings[id-1].itemname);
-	if(amount == 1 && money >= buildings[id-1].cost){
-		money -= buildings[id-1].cost;
-		buildings[id-1].count++;
+	var cost = CalculateCost(id, amount);
+
+	if(money >= cost){
+		money -= cost;
+		buildings[id-1].count += amount;
 		buildings[id-1].cost = buildings[id-1].baseCost * Math.pow(1.15, buildings[id-1].count);
-		console.log("Bought");
 		UpdateEverything();
 	}
 
-	if(amount != 1){
-		var thisItemBaseCost = buildings[id - 1].baseCost;
-		var thisItemCount = buildings[id - 1].count;
-		var totalCost = 0;
-
-		for(var i = 0; i < amount; i++){
-			totalCost = totalCost + (thisItemBaseCost * Math.pow(1.15, thisItemCount + i));
-		}
-		console.log(totalCost);
-
-		if(money >= totalCost){
-			money -= totalCost;
-			buildings[id - 1].count += amount;
-			buildings[id - 1].cost = buildings[id-1].baseCost * Math.pow(1.15, buildings[id-1].count);
-			UpdateEverything();
-		}
-	}
+	
 }
